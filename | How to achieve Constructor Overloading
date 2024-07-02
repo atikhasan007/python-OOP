@@ -1,0 +1,47 @@
+//key based
+class Student :
+    
+    def __init__(self, **info):
+        
+        if len(info) == 3:
+           self.name = info['name']
+           self.id = info['id']
+           self.cg = info['cg']
+           
+           
+        elif len(info) == 2:
+              self.name = info['name']
+              self.id = info['id'];
+        elif len(info) == 1:
+              self.name = info['name']
+        print("A student object created ")
+
+s1 = Student(name="atik",id=168,cg=3.33)
+s2 = Student(name ="faruk",id =145)
+s3 = Student(name ="Mike")
+s4 = Student()
+
+//normal
+
+#how to achieve constructor Overloading 
+
+class Student :
+    
+    def __init__(self, *info):
+        
+        if len(info) == 3:
+           self.name = info[0]
+           self.id = info[1]
+           self.cg = info[2]
+           
+        elif len(info) == 2:
+              self.name = info[0]
+              self.id = info[1];
+        elif len(info) == 1:
+              self.name = info[0]
+        print("A student object created ")
+
+s1 = Student("atik", 168,3.33)
+s2 = Student("faruk",145)
+s3 = Student("Mike")
+s4 = Student()
