@@ -1,0 +1,15 @@
+class ABC:
+    def __init__(self,x,y):
+        self.x = x #instance variable
+        self.__y = y #private  instacne variable
+    def details(self):
+        print("X :", self.x , "Y :",self.__y)
+        self.__method() #private method access
+    def __method(self):
+        print("private method executed")
+#===============================================
+
+s1 = ABC(5,6)
+s2 = ABC(15, 17)
+
+s1.details()
