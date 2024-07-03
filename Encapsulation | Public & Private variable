@@ -1,0 +1,24 @@
+#encaptulation
+class Student:
+    def __init__(self, name, id):
+        self.name = name #instance variable
+        self.__id = id #instance variable __id is private
+
+
+
+    def details(self): #instance method
+        print("Name :", self.name, "ID :",self.__id)
+    def update_id(self,id):
+        if (id>0):
+            self.__id = id
+        else:
+            print("Invalid id")
+
+s1 = Student("bob",11)
+s1.update_id(60)
+s1.details()
+s2 = Student("carol",23)
+s2.details()
+
+
+
