@@ -1,0 +1,42 @@
+#encaptulation
+class Student:
+    def __init__(self, name, id):
+        self.name = name #instance variable
+        self.__id = id #instance variable __id is private
+
+
+
+    def details(self): #instance method
+        print("Name :", self.name, "ID :",self.__id)
+    def set_id(self,id):
+        if (id>0):
+            self.__id = id
+        else:
+            print("Invalid id")
+
+    def get_id(self):
+        return self.__id
+
+    def set_name(self,name):
+        self.name = name
+    def get_name(self):
+        return self.name
+#======================================
+s1 = Student("bob",11)
+s2 = Student("carol",23)
+s1.set_id(55)
+s1.set_name("atik")
+print(s1.get_id())
+print(s1.get_name())
+
+s2.set_id(44)
+s2.set_name("rakib")
+print(s2.get_id())
+print(s2.get_name())
+
+
+
+s1.details()
+s2.details()
+
+
