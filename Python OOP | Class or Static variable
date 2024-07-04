@@ -1,0 +1,36 @@
+class Player:
+    team_run = 0 #class or static variable
+    
+    def __init__(self, run):
+        self.run = run
+       
+        
+    def hit_four(self):
+        self.run +=4
+        Player.team_run+=4
+        
+    
+    def hit_six(self):
+        self.run +=6
+        Player.team_run+=6
+      
+
+print(Player.team_run)
+
+sakib = Player(0)
+tamim = Player(0)
+
+tamim.hit_four()
+tamim.hit_four()
+sakib.hit_four()
+sakib.hit_six()
+
+
+print("sakib:",sakib.run)
+print("tamim:",tamim.run)
+print("Tema_run :",Player.team_run)
+print("Team run:",tamim.team_run)
+print("Team run:", sakib.team_run)
+
+#print("Tamim", tamim.__dict__)
+#print("sakib",sakib.__dict__)
