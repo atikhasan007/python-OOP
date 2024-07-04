@@ -34,3 +34,34 @@ print("Team run:", sakib.team_run)
 
 #print("Tamim", tamim.__dict__)
 #print("sakib",sakib.__dict__)
+
+
+#second example
+class Student:
+   
+    s_count = 0 #class or static variable
+    def __init__(self, name, id):
+        self.name = name #instance variable
+        self.id = id #instance variable
+        #Student.s_count+=1
+        
+        
+       
+        
+    def details(self):
+        Student.s_count +=1
+        print("Name :", self.name, "Id :",self.id)
+
+
+#========================================
+print("student count ", Student.s_count)
+
+s1 = Student("Bob", 11)
+s2 = Student("Carol", 22)
+s3 = Student("Mike", 33)
+s1.details()
+s2.details()
+# s3.details()
+
+print("student count ", Student.s_count)
+
