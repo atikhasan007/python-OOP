@@ -1,0 +1,25 @@
+class Student:
+    
+    uni_name = "BUBT"
+    def __init__(self, name ,id):
+        self.name = name
+        self.id = id
+        
+    def details(self): #instance method
+        print("Name : " , self.name, "Id: ", self.id,
+              Student.uni_name)
+        
+    @classmethod
+    def up_uni_name(cls,u_name):
+        cls.uni_name = u_name
+        
+
+s1 = Student("Bob", 11)
+s2 = Student("Carol", 22)
+
+s1.details()
+s2.details()
+Student.up_uni_name("bangladesh university of business and technology")
+s1.details()
+s2.details()
+
