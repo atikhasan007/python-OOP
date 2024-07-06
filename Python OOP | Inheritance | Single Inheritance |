@@ -1,0 +1,33 @@
+class Animal:
+    def __init__(self, name):
+        self.name = name #instance variable
+
+
+    def eat(self):
+        print(self.name, "is eating")
+
+
+#==============================================
+
+class Dog(Animal):
+
+    def bark(self):
+        print(self.name, "is barking")
+
+#================================================
+a1 = Animal("jack")
+d1 = Dog("Rover")
+d1.bark()
+d1.eat()
+a1.eat()
+
+#isinstance(Object,ClassName)
+#issubclass(Class,ClassName)
+print(issubclass(Dog,Animal)) #dog ki animal er subclass
+print(issubclass(Animal,Dog)) #animal ki dog er subclass
+print(isinstance(a1, Animal)) #a1 ki animal class er object
+
+
+
+
+
