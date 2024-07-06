@@ -1,0 +1,32 @@
+
+class Student:
+    def __init__(self,name,id):
+        self.name = name
+        self.id = id
+
+    def details(self):
+        print("Name:",self.name, "Id:",self.id)
+
+#====================================================
+class Cse_Student(Student):
+    def __init__(self, name , id, lab):
+        super().__init__(name,id)
+        self.lab = lab
+    def cry(self):
+        print("CSE Student is crying because of ",
+              self.lab, "labs")
+#===================================================='
+class Bba_Student(Student):
+
+    def party(self):
+        print("all day party")
+#======================================================
+s1 = Cse_Student("bob",33,103)
+s2 = Bba_Student("carol",35)
+#print(s1.__dict__)
+s1.details()
+s2.details()
+s1.cry()
+s2.party()
+
+
