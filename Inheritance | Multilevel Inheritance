@@ -1,0 +1,28 @@
+class Student: #grand parent class
+    def __init__(self,name,id):
+        self.name = name
+        self.id = id
+
+    def details(self):
+        print("Name:",self.name, "id:",self.id)
+#=============================================
+class Cse_Student(Student): #parent class
+    def __init__(self,name,id,lab):
+        super().__init__(name,id)
+        self.lab = lab
+    def cry(self):
+        print(self.name, "is crying because of ",self.lab,"lab(s)")
+#==========================================================
+class Cse_Fresher(Cse_Student): #child class
+    def enroll_cse110(self):
+        print(" enrolled in cse110")
+#=================================================
+
+s1 = Cse_Student("carol",34,3)
+s2 = Cse_Fresher("bob",55,1)
+s2.details()
+s1.details()
+s1.cry()
+s2.cry()
+s2.enroll_cse110()
+
