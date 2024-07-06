@@ -1,0 +1,34 @@
+class Student:
+    uni_name = "Bubt"
+
+    def __init__(self, name , id):
+        self.name = name
+        self.id = id
+
+    def details(self):
+        print("Name:",self.name, "Id:",self.id,Student.uni_name)
+
+    @classmethod
+    def up_uni_name(cls,u_name):
+        cls.uni_name = u_name
+
+    @staticmethod
+    def check_department(id):
+        if id[3:5] == "01" : print("cse")
+        elif id[3:5] == "41":print("cs")
+
+
+Student.check_department("14341007")
+s1 = Student("bob", 11)
+s1.details()
+
+s2 = Student("carol", 44)
+s2.details()
+
+Student.up_uni_name("Bangladesh university of business and technology")
+s1.details()
+s2.details()
+
+Student.check_department("15301007")
+
+
